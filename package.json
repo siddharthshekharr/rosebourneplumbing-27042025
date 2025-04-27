@@ -11,7 +11,8 @@
     "generate-checklist": "node scripts/testChecklist.js",
     "test-google-places": "node scripts/testGooglePlacesAPI.js",
     "test:google-reviews": "node scripts/test-google-reviews.js",
-    "replace-nextimage": "node scripts/replace-cloudinary.js"
+    "replace-nextimage": "node scripts/replace-cloudinary.js",
+    "update-image-paths": "node scripts/update-image-paths.js"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.8",

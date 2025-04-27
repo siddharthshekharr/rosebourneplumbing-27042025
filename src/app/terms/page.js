@@ -8,7 +8,7 @@ export default function TermsPage() {
             <section className="relative py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="plumbing-website/services/terms/hero"
+                    <NextImage src="services/terms/hero.jpg"
                         alt="Terms and Conditions"
                         fill
                         className="object-cover"

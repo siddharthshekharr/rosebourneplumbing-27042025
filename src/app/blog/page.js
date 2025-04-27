@@ -67,7 +67,7 @@ export default function BlogPage() {
             <section className="relative py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="plumbing-website/services/blog/hero"
+                    <NextImage src="services/blog/hero.jpg"
                         alt="Blog"
                         fill
                         className="object-cover"

@@ -176,7 +176,7 @@ export default function ReviewsPage() {
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <NextImage
-            src="plumbing-website/reviews-hero"
+            src="reviews-hero.jpg"
             alt="Customer Reviews and Testimonials"
             fill
             className="object-cover"

@@ -8,7 +8,7 @@ export default function OutsideTapPage() {
             <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="plumbing-website/services/outside-tap/hero"
+                    <NextImage src="services/outside-tap/hero.jpg"
                         alt="Outside Tap Installation"
                         fill
                         className="object-cover"
@@ -116,7 +116,7 @@ export default function OutsideTapPage() {
                             {/* Image */}
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                    <NextImage src="plumbing-website/services/outside-tap/content"
+                                    <NextImage src="services/outside-tap/content.jpg"
                                         alt="Outside Tap Installation"
                                         fill
                                         className="object-cover"

@@ -8,7 +8,7 @@ export default function WaterHeaterPage() {
             <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="plumbing-website/services/water-heater/hero"
+                    <NextImage src="services/water-heater/hero.jpg"
                         alt="Water Heater Repair Services"
                         fill
                         className="object-cover"
@@ -116,7 +116,7 @@ export default function WaterHeaterPage() {
                             {/* Image */}
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                    <NextImage src="plumbing-website/services/water-heater/content"
+                                    <NextImage src="services/water-heater/content.jpg"
                                         alt="Water Heater Services"
                                         fill
                                         className="object-cover"

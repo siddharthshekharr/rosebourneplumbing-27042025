@@ -8,7 +8,7 @@ export default function ToiletInstallationPage() {
             <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="plumbing-website/services/toilet-installation/hero"
+                    <NextImage src="services/toilet-installation/hero.jpg"
                         alt="Toilet Installation Services"
                         fill
                         className="object-cover"
@@ -116,7 +116,7 @@ export default function ToiletInstallationPage() {
                             {/* Image */}
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                    <NextImage src="plumbing-website/services/toilet-installation/content"
+                                    <NextImage src="services/toilet-installation/content.jpg"
                                         alt="Toilet Installation"
                                         fill
                                         className="object-cover"

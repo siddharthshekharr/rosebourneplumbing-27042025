@@ -26,9 +26,9 @@ export default function NextImage({
         processedSrc = `/images/${src}`;
     }
 
-    // If it's a key without extension, add one as Next.js needs file extensions
+    // Don't automatically add extensions - require them in the src
     if (!processedSrc.includes('.') && !processedSrc.startsWith('http')) {
-        processedSrc = `${processedSrc}.png`;
+        console.warn(`[NextImage] Image path "${processedSrc}" is missing a file extension. Please add .jpg, .png, etc.`);
     }
 
     return (

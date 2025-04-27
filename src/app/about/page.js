@@ -83,7 +83,7 @@ export default function About() {
                                     <div className="flex items-center space-x-6">
                                         <div className="relative">
                                             <div className="w-20 h-20 rounded-xl overflow-hidden">
-                                                <NextImage src="services/about/content"
+                                                <NextImage src="services/about/content.jpg"
                                                     alt="Will - Owner of Rosebourne Plumbing"
                                                     width={80}
                                                     height={80}
@@ -123,7 +123,7 @@ export default function About() {
                             <div className="relative lg:h-[800px]">
                                 <div className="sticky top-8">
                                     <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                        <NextImage src="services/about/content"
+                                        <NextImage src="services/about/content.jpg"
                                             alt="Professional Plumbing Service"
                                             fill
                                             className="object-cover"
@@ -245,7 +245,7 @@ export default function About() {
                             {/* Left Side - Image */}
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                    <NextImage src="services/about/content"
+                                    <NextImage src="services/about/content.jpg"
                                         alt="Professional Plumbing Service"
                                         fill
                                         className="object-cover"

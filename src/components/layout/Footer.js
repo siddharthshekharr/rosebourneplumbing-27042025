@@ -12,7 +12,7 @@ export default function Footer() {
                         <Link href="/" className="block">
                             <div className="relative h-12 w-36">
                                 <NextImage
-                                    src="logo-white"
+                                    src="logo-white.png"
                                     alt="Rosebourne Plumbing Logo"
                                     fill
                                     className="object-contain"

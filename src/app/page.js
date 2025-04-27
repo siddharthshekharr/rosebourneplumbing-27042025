@@ -66,7 +66,7 @@ export default function Home() {
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                     <NextImage
-                        src="hero"
+                        src="hero.jpg"
                         alt="Professional Plumbing Services"
                         fill
                         className="object-cover"
@@ -374,7 +374,7 @@ export default function Home() {
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
                                     <NextImage
-                                        src="professional-plumber-at-work"
+                                        src="professional-plumber-at-work.jpg"
                                         alt="Professional Plumber at Work"
                                         fill
                                         className="object-cover"
