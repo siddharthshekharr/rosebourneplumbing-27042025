@@ -1,12 +1,13 @@
 'use client';
 
 import React from 'react';
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import BookingInfoCard from '@/components/BookingInfoCard'
 import { MapPin } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
+import Image from 'next/image'
 
 // Metadata moved to separate file
 // export const metadata = {
@@ -21,11 +22,12 @@ export default function ServiceAreaPage() {
             {/* Hero Section */}
             <section className="relative py-20 md:py-28">
                 <div className="absolute inset-0 overflow-hidden">
-                    <NextImage
+                    <Image
                         src="/images/plumber-map.jpg"
-                        alt="Rosebourne Plumbing Service Areas"
-                        fill
-                        className="object-cover"
+                        alt="Service Area Map"
+                        width={800}
+                        height={500}
+                        className="w-full h-auto rounded-lg"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/60" />
                 </div>

@@ -1,4 +1,4 @@
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function TermsPage() {
@@ -8,7 +8,7 @@ export default function TermsPage() {
             <section className="relative py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="services/terms/hero.jpg"
+                    <Image src="services/terms/hero.jpg"
                         alt="Terms and Conditions"
                         fill
                         className="object-cover"

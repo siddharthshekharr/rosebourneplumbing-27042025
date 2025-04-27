@@ -1,4 +1,4 @@
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function About() {
@@ -8,7 +8,8 @@ export default function About() {
             <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="about-us-hero.jpg"
+                    <Image
+                        src="/images/about-us-hero.jpg"
                         alt="About Us Hero"
                         fill
                         className="object-cover"
@@ -83,7 +84,8 @@ export default function About() {
                                     <div className="flex items-center space-x-6">
                                         <div className="relative">
                                             <div className="w-20 h-20 rounded-xl overflow-hidden">
-                                                <NextImage src="services/about/content.jpg"
+                                                <Image
+                                                    src="/images/services/about/content.jpg"
                                                     alt="Will - Owner of Rosebourne Plumbing"
                                                     width={80}
                                                     height={80}
@@ -123,7 +125,8 @@ export default function About() {
                             <div className="relative lg:h-[800px]">
                                 <div className="sticky top-8">
                                     <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                        <NextImage src="services/about/content.jpg"
+                                        <Image
+                                            src="/images/services/about/content.jpg"
                                             alt="Professional Plumbing Service"
                                             fill
                                             className="object-cover"
@@ -245,7 +248,8 @@ export default function About() {
                             {/* Left Side - Image */}
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                    <NextImage src="services/about/content.jpg"
+                                    <Image
+                                        src="/images/services/about/content.jpg"
                                         alt="Professional Plumbing Service"
                                         fill
                                         className="object-cover"

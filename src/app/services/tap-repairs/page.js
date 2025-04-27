@@ -1,4 +1,4 @@
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function TapRepairsPage() {
@@ -8,7 +8,7 @@ export default function TapRepairsPage() {
             <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="services/tap-repairs/hero.jpg"
+                    <Image src="/images/services/tap-repairs/hero.jpg"
                         alt="Tap Repair Services"
                         fill
                         className="object-cover"
@@ -116,7 +116,7 @@ export default function TapRepairsPage() {
                             {/* Image */}
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                    <NextImage src="services/tap-repairs/content.jpg"
+                                    <Image src="/images/services/tap-repairs/content.jpg"
                                         alt="Tap Repair Services"
                                         fill
                                         className="object-cover"

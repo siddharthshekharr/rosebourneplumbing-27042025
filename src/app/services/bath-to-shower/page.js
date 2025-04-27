@@ -1,4 +1,4 @@
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function BathToShowerPage() {
@@ -8,7 +8,7 @@ export default function BathToShowerPage() {
             <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="services/bath-to-shower/hero.jpg"
+                    <Image src="/images/services/bath-to-shower/hero.jpg"
                         alt="Bath to Shower Conversion"
                         fill
                         className="object-cover"
@@ -116,7 +116,7 @@ export default function BathToShowerPage() {
                             {/* Image */}
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                    <NextImage src="services/bath-to-shower/content.jpg"
+                                    <Image src="/images/services/bath-to-shower/content.jpg"
                                         alt="Bath to Shower Conversion"
                                         fill
                                         className="object-cover"

@@ -1,4 +1,4 @@
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const blogPosts = [
@@ -67,7 +67,7 @@ export default function BlogPage() {
             <section className="relative py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage src="services/blog/hero.jpg"
+                    <Image src="services/blog/hero.jpg"
                         alt="Blog"
                         fill
                         className="object-cover"
@@ -102,7 +102,7 @@ export default function BlogPage() {
                             <article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105">
                                 <Link href={`/blog/${post.slug}`}>
                                     <div className="relative h-48">
-                                        <NextImage src={post.image}
+                                        <Image src={post.image}
                                             alt={post.title}
                                             fill
                                             className="object-cover"

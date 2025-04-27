@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Loader2, Upload, X, Check } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { Progress } from '@/components/ui/progress'
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 
 /**
  * Image Uploader Component
@@ -142,7 +142,7 @@ export default function ImageUploader({
         {/* Show preview if image is uploaded */}
         {uploadedImage ? (
           <div className="relative w-full h-full min-h-[200px]">
-            <NextImage
+            <Image
               src={uploadedImage}
               alt="Uploaded image"
               fill

@@ -1,4 +1,4 @@
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 import BookingInfoCard from '@/components/BookingInfoCard'
 import { StarIcon, MapPin } from 'lucide-react'
@@ -175,8 +175,8 @@ export default function ReviewsPage() {
       <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
-          <NextImage
-            src="reviews-hero.jpg"
+          <Image
+            src="/images/reviews-hero.jpg"
             alt="Customer Reviews and Testimonials"
             fill
             className="object-cover"
@@ -366,12 +366,12 @@ export default function ReviewsPage() {
               {/* Image */}
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-xl h-80">
-                  <NextImage
+                  <Image
                     src="/images/plumber-map.jpg"
-                    alt="Rosebourne Plumbing Service Areas Map"
-                    width={800}
-                    height={600}
-                    className="rounded-lg shadow-lg"
+                    alt="Service Area Map"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-lg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
                 </div>

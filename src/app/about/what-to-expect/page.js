@@ -1,4 +1,4 @@
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 import CallExpectations from '@/components/CallExpectations'
 import { Calendar, MessageSquare, CreditCard } from 'lucide-react'
@@ -10,7 +10,7 @@ export default function WhatToExpectPage() {
             <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage
+                    <Image
                         src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=2069"
                         alt="What to Expect from Our Service"
                         fill
@@ -352,7 +352,7 @@ export default function WhatToExpectPage() {
                         <div className="flex flex-col lg:flex-row items-center gap-8 mb-16">
                             <div className="lg:w-1/2">
                                 <div className="rounded-xl overflow-hidden shadow-lg">
-                                    <NextImage
+                                    <Image
                                         src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2569"
                                         alt="Plumber working on schedule"
                                         width={600}
@@ -480,7 +480,7 @@ export default function WhatToExpectPage() {
                         <div className="bg-white p-8 rounded-xl shadow border border-blue-100">
                             <div className="flex flex-col md:flex-row items-center">
                                 <div className="md:w-1/3 mb-6 md:mb-0 md:pr-8">
-                                    <NextImage
+                                    <Image
                                         src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2570"
                                         alt="Professional Call Handling"
                                         width={400}
@@ -551,7 +551,7 @@ export default function WhatToExpectPage() {
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-12 mb-12">
                             <div className="lg:w-1/2">
                                 <div className="rounded-xl overflow-hidden shadow-lg">
-                                    <NextImage
+                                    <Image
                                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070"
                                         alt="Digital job management"
                                         width={600}

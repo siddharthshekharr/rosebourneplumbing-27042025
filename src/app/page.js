@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import {
@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/accordion"
 import ServiceAreasMap from '@/components/ServiceAreasMap'
 import BookingInfoCard from '@/components/BookingInfoCard'
-import Image from 'next/image'
 
 const services = [
     {
@@ -65,8 +64,8 @@ export default function Home() {
             <section className="relative min-h-[90vh] flex items-center py-32 overflow-hidden">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
-                    <NextImage
-                        src="hero.jpg"
+                    <Image
+                        src="/images/hero.jpg"
                         alt="Professional Plumbing Services"
                         fill
                         className="object-cover"
@@ -80,7 +79,7 @@ export default function Home() {
                 {/* Background Pattern - Reduced opacity */}
                 <div className="absolute inset-0 opacity-5 z-0">
                     <div className="absolute inset-0" style={{
-                        backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+                        backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6zM36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
                     }} />
                 </div>
 
@@ -373,8 +372,8 @@ export default function Home() {
                             {/* Right Side - Image */}
                             <div className="relative">
                                 <div className="relative h-[600px] rounded-2xl overflow-hidden">
-                                    <NextImage
-                                        src="professional-plumber-at-work.jpg"
+                                    <Image
+                                        src="/images/professional-plumber-at-work.jpg"
                                         alt="Professional Plumber at Work"
                                         fill
                                         className="object-cover"

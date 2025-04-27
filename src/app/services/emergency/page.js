@@ -1,5 +1,5 @@
 import React from 'react'
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 import BookingInfoCard from '@/components/BookingInfoCard'
 import ServiceAreasMap from '@/components/ServiceAreasMap'

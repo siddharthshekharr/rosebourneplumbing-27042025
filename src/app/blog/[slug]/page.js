@@ -1,6 +1,6 @@
 'use client'
 
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
@@ -111,7 +111,7 @@ export default function BlogPost() {
             {/* Hero Section */}
             <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 <div className="absolute inset-0">
-                    <NextImage src={post.image}
+                    <Image src={post.image}
                         alt={post.title}
                         fill
                         className="object-cover"

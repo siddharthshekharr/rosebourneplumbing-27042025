@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import NextImage from '@/components/ui/NextImage'
+import Image from 'next/image'
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -306,11 +306,11 @@ export default function Header() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <div className="relative h-12 w-48">
-                            <NextImage
-                                src="logo.png"
+                            <Image
+                                src="/images/logo.png"
                                 alt="Rosebourne Plumbing"
-                                width={192}
-                                height={48}
+                                width={150}
+                                height={50}
                                 className="object-contain"
                                 priority
                             />
@@ -325,9 +325,8 @@ export default function Header() {
                                     <NavigationMenuLink asChild>
                                         <Link
                                             href="/"
-                                            className={`px-4 py-2 text-sm font-medium transition-colors hover:text-blue-600 ${
-                                                usePathname() === '/' ? 'text-blue-600' : 'text-gray-700'
-                                            }`}
+                                            className={`px-4 py-2 text-sm font-medium transition-colors hover:text-blue-600 ${usePathname() === '/' ? 'text-blue-600' : 'text-gray-700'
+                                                }`}
                                         >
                                             Home
                                         </Link>
@@ -335,10 +334,9 @@ export default function Header() {
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <NavigationMenuTrigger 
-                                        className={`px-4 py-2 text-sm font-medium transition-colors hover:text-blue-600 ${
-                                            usePathname().startsWith('/services') ? 'text-blue-600' : 'text-gray-700'
-                                        }`}
+                                    <NavigationMenuTrigger
+                                        className={`px-4 py-2 text-sm font-medium transition-colors hover:text-blue-600 ${usePathname().startsWith('/services') ? 'text-blue-600' : 'text-gray-700'
+                                            }`}
                                     >
                                         Services
                                     </NavigationMenuTrigger>
@@ -351,7 +349,7 @@ export default function Header() {
                                                         <div className="md:col-span-2 space-y-2">
                                                             <h3 className="text-lg font-bold text-blue-800">Professional Plumbing Services in Hampshire</h3>
                                                             <p className="text-blue-700">Expert plumbing solutions in Andover, Hungerford & Marlborough</p>
-                                                            <Link 
+                                                            <Link
                                                                 href="/services"
                                                                 className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
                                                             >
