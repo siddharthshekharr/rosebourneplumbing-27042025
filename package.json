@@ -12,7 +12,9 @@
     "test-google-places": "node scripts/testGooglePlacesAPI.js",
     "test:google-reviews": "node scripts/test-google-reviews.js",
     "replace-nextimage": "node scripts/replace-cloudinary.js",
-    "update-image-paths": "node scripts/update-image-paths.js"
+    "update-image-paths": "node scripts/update-image-paths.js",
+    "validate-images": "node scripts/validate-image-paths.js",
+    "download-images": "node scripts/download-cloudinary-images.js"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.8",
