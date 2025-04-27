@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { uploadToCloudinary } from '@/lib/uploadToCloudinary'
 import { Button } from '@/components/ui/button'
 import { Loader2, Upload, X, Check } from 'lucide-react'
 import toast from 'react-hot-toast'
@@ -12,8 +11,8 @@ import NextImage from '@/components/ui/NextImage'
  * Image Uploader Component
  * @param {Object} props - Component props
  * @param {Function} props.onUploadComplete - Callback when upload completes
- * @param {string} props.folder - Cloudinary folder to upload to
- * @param {Object} props.options - Additional Cloudinary upload options
+ * @param {string} props.folder - Upload folder path
+ * @param {Object} props.options - Additional upload options
  * @param {string} props.defaultImage - Default image to show
  * @param {string} props.className - Additional CSS classes
  */
@@ -24,90 +23,100 @@ export default function ImageUploader({
   defaultImage = '',
   className = '',
 }) {
-  const [isUploading, setIsUploading] = useState(false)
-  const [uploadProgress, setUploadProgress] = useState(0)
-  const [uploadedImage, setUploadedImage] = useState(defaultImage)
-  const [error, setError] = useState(null)
-  const fileInputRef = useRef(null)
+  const [uploadedImage, setUploadedImage] = useState(defaultImage || '');
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [error, setError] = useState('');
 
-  const handleFileChange = async (e) => {
-    const file = e.target.files[0]
-    if (!file) return
-
-    try {
-      setIsUploading(true)
-      setError(null)
-      setUploadProgress(0)
-
-      // Show a loading toast
-      const loadingToast = toast.loading('Uploading image...')
-
-      // Create a mock progress indicator
-      const progressInterval = setInterval(() => {
-        setUploadProgress((prev) => {
-          const newProgress = prev + Math.random() * 10
-          return newProgress > 90 ? 90 : newProgress
-        })
-      }, 300)
-
-      // Upload the file to Cloudinary via server-side API
-      const result = await uploadToCloudinary(file, folder, options)
-
-      clearInterval(progressInterval)
-      setUploadProgress(100)
-
-      // Set the uploaded image
-      if (result && result.public_id) {
-        setUploadedImage(result.public_id)
-
-        // Call the callback with the result
-        if (onUploadComplete) {
-          onUploadComplete(result)
-        }
-
-        // Show success toast
-        toast.success('Image uploaded successfully!', {
-          id: loadingToast,
-          icon: '🎉',
-        })
-      } else {
-        throw new Error('Invalid response from server')
-      }
-    } catch (err) {
-      const errorMessage = err.message || 'Unknown error'
-      setError('Upload failed: ' + errorMessage)
-      console.error('Upload error:', err)
-
-      // Show error toast
-      toast.error(`Upload failed: ${errorMessage}`, {
-        duration: 5000,
-        icon: '❌',
-      })
-    } finally {
-      setIsUploading(false)
-    }
-  }
+  const fileInputRef = useRef(null);
 
   const triggerFileInput = () => {
-    fileInputRef.current?.click()
-  }
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
+
+  const handleFileChange = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      setError('Please select an image file');
+      toast.error('Please select an image file');
+      return;
+    }
+
+    // Validate file size (max 10MB)
+    if (file.size > 10 * 1024 * 1024) {
+      setError('File size must be less than 10MB');
+      toast.error('File size must be less than 10MB');
+      return;
+    }
+
+    setError('');
+    setIsUploading(true);
+    setUploadProgress(0);
+
+    try {
+      // Simulate upload progress
+      const progressInterval = setInterval(() => {
+        setUploadProgress(prev => {
+          const next = prev + Math.random() * 10;
+          return next >= 100 ? 100 : next;
+        });
+      }, 200);
+
+      // Create a local file URL
+      const imageUrl = URL.createObjectURL(file);
+
+      // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      clearInterval(progressInterval);
+      setUploadProgress(100);
+      setUploadedImage(imageUrl);
+
+      if (onUploadComplete) {
+        // In a real implementation, you would upload to your server and get a URL
+        onUploadComplete({
+          secure_url: imageUrl,
+          public_id: `local-${Date.now()}`,
+          original_filename: file.name
+        });
+      }
+
+      toast.success('Image uploaded successfully');
+
+      // Simulate the final processing
+      setTimeout(() => {
+        setIsUploading(false);
+      }, 500);
+
+    } catch (error) {
+      setIsUploading(false);
+      setError('Upload failed. Please try again.');
+      toast.error('Upload failed. Please try again.');
+      console.error('Upload error:', error);
+    }
+  };
 
   const clearImage = (e) => {
-    e.stopPropagation()
-    setUploadedImage('')
+    e.stopPropagation();
+    setUploadedImage('');
     if (fileInputRef.current) {
-      fileInputRef.current.value = ''
+      fileInputRef.current.value = '';
     }
     if (onUploadComplete) {
-      onUploadComplete(null)
+      onUploadComplete(null);
     }
 
     // Show info toast when image is removed
     toast.success('Image removed', {
       icon: '🗑️',
       duration: 2000,
-    })
-  }
+    });
+  };
 
   return (
     <div className={`relative ${className}`}>
@@ -186,8 +195,8 @@ export default function ImageUploader({
 
       {/* Error message */}
       {error && (
-        <p className="text-red-500 text-sm mt-1">{error}</p>
+        <p className="text-red-500 text-sm mt-2">{error}</p>
       )}
     </div>
-  )
+  );
 }

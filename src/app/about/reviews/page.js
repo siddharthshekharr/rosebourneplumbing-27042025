@@ -37,7 +37,7 @@ function GoogleReviewsSubset({ title, description, reviewsType }) {
       text: "Fast to arrange a call out. Came bang on time with a text warning of the time of arrival. Will is so nice, and really works hard to get to the source of the problem."
     }
   ];
-  
+
   const bathroomReviews = [
     {
       author_name: "Barry Millin",
@@ -61,7 +61,7 @@ function GoogleReviewsSubset({ title, description, reviewsType }) {
       text: "Recently had our bathroom completely refurbished by Rosebourne Plumbing. From the initial consultation to the final touches, their attention to detail was impeccable. The results are stunning!"
     }
   ];
-  
+
   const heatingReviews = [
     {
       author_name: "Robert Anderson",
@@ -85,7 +85,7 @@ function GoogleReviewsSubset({ title, description, reviewsType }) {
       text: "Had issues with our boiler not heating properly. Called Rosebourne Plumbing and they diagnosed and fixed the problem efficiently. Excellent service and great value."
     }
   ];
-  
+
   // Select the appropriate review set based on type
   let reviews = [];
   if (reviewsType === "emergency") {
@@ -129,26 +129,26 @@ function GoogleReviewsSubset({ title, description, reviewsType }) {
                     <p className="text-sm text-gray-500">{review.location}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <StarIcon 
-                      key={i} 
-                      size={16} 
-                      className={`${i < review.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
+                    <StarIcon
+                      key={i}
+                      size={16}
+                      className={`${i < review.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
                     />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-700 text-sm mb-2 flex-grow">
                   "{review.text}"
                 </p>
-                
+
                 <p className="text-sm text-gray-500 mt-auto">{review.relative_time}</p>
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-8">
             <Link
               href="https://maps.google.com/?cid=17633610867658341964"
@@ -199,7 +199,7 @@ export default function ReviewsPage() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Customer 
+              Customer
               <div className="mt-2">
                 <span className="relative inline-block px-4">
                   <span className="relative z-10">Reviews</span>
@@ -211,7 +211,7 @@ export default function ReviewsPage() {
             <p className="text-xl text-gray-300 mb-8">
               With over 120 5-star reviews, Rosebourne Plumbing provides top-rated plumbing, heating, and bathroom services across Hampshire & Wiltshire.
             </p>
-            
+
             <Link
               href="/contact"
               className="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105"
@@ -299,8 +299,8 @@ export default function ReviewsPage() {
       </section>
 
       {/* Google Reviews Section 1 - Emergency Plumbing */}
-      <GoogleReviewsSubset 
-        title="Emergency Plumbing Reviews" 
+      <GoogleReviewsSubset
+        title="Emergency Plumbing Reviews"
         description="See what our customers say about our emergency plumbing services. We pride ourselves on quick response times and effective solutions."
         reviewsType="emergency"
       />
@@ -332,7 +332,7 @@ export default function ReviewsPage() {
                     </div>
                     <p className="text-sm text-gray-600">SP10, SP11</p>
                   </div>
-                  
+
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
                     <div className="flex items-center mb-2">
                       <MapPin className="h-5 w-5 text-blue-500 mr-2" />
@@ -340,7 +340,7 @@ export default function ReviewsPage() {
                     </div>
                     <p className="text-sm text-gray-600">SN8</p>
                   </div>
-                  
+
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
                     <div className="flex items-center mb-2">
                       <MapPin className="h-5 w-5 text-blue-500 mr-2" />
@@ -367,10 +367,11 @@ export default function ReviewsPage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-xl h-80">
                   <NextImage
-                    src="https://res.cloudinary.com/djlajrmme/image/upload/v1710964779/plumber-map_hmz5pf.jpg"
+                    src="/images/plumber-map.jpg"
                     alt="Rosebourne Plumbing Service Areas Map"
-                    fill
-                    className="object-cover"
+                    width={800}
+                    height={600}
+                    className="rounded-lg shadow-lg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
                 </div>
@@ -381,8 +382,8 @@ export default function ReviewsPage() {
       </section>
 
       {/* Google Reviews Section 2 - Bathroom Installation */}
-      <GoogleReviewsSubset 
-        title="Bathroom Installation Reviews" 
+      <GoogleReviewsSubset
+        title="Bathroom Installation Reviews"
         description="Our bathroom installation and renovation work is highly regarded by customers across Hampshire & Wiltshire. See what people are saying about our craftsmanship."
         reviewsType="bathroom"
       />
@@ -454,12 +455,12 @@ export default function ReviewsPage() {
       </section>
 
       {/* Google Reviews Section 3 - Heating & Boiler */}
-      <GoogleReviewsSubset 
-        title="Heating & Boiler Service Reviews" 
+      <GoogleReviewsSubset
+        title="Heating & Boiler Service Reviews"
         description="Keeping homes warm and comfortable is our specialty. Read about our customers' experiences with our heating installations and boiler services."
         reviewsType="heating"
       />
-            
+
       {/* Booking Info Card */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -473,14 +474,14 @@ export default function ReviewsPage() {
       <section className="sr-only">
         <h2>Plumbing Services Reviews</h2>
         <p>
-          Top-rated plumbing services in Hampshire and Wiltshire. Emergency plumbing repairs, boiler installations, bathroom renovations, 
-          kitchen plumbing, heating system services, water system installation, maintenance plans, leak detection, 
-          drain unblocking, tap repairs, shower installation, toilet repairs, radiator installation, underfloor heating, 
+          Top-rated plumbing services in Hampshire and Wiltshire. Emergency plumbing repairs, boiler installations, bathroom renovations,
+          kitchen plumbing, heating system services, water system installation, maintenance plans, leak detection,
+          drain unblocking, tap repairs, shower installation, toilet repairs, radiator installation, underfloor heating,
           thermostat installation, hot water cylinder replacement, water pressure solutions, burst pipe repairs, and more.
         </p>
         <h2>Service Areas</h2>
         <p>
-          Andover, Marlborough, Hungerford, Newbury, Winchester, Basingstoke, Stockbridge, Salisbury, Amesbury, 
+          Andover, Marlborough, Hungerford, Newbury, Winchester, Basingstoke, Stockbridge, Salisbury, Amesbury,
           Tidworth, Ludgershall, Pewsey, Ramsbury, Hampshire, Wiltshire, emergency plumber near me.
         </p>
       </section>

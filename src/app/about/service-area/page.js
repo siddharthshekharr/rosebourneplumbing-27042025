@@ -22,7 +22,7 @@ export default function ServiceAreaPage() {
             <section className="relative py-20 md:py-28">
                 <div className="absolute inset-0 overflow-hidden">
                     <NextImage
-                        src="https://res.cloudinary.com/djlajrmme/image/upload/v1710964779/plumber-map_hmz5pf.jpg"
+                        src="/images/plumber-map.jpg"
                         alt="Rosebourne Plumbing Service Areas"
                         fill
                         className="object-cover"
@@ -160,9 +160,9 @@ export default function ServiceAreaPage() {
                                                 </svg>
                                             </div>
                                         </div>
-                                        
+
                                         <p className="text-gray-600 mb-4">{area.description}</p>
-                                        
+
                                         <h4 className="font-semibold text-gray-900 mb-2">Areas Covered:</h4>
                                         <div className="grid grid-cols-2 gap-2">
                                             {area.areas.map((item, i) => (
@@ -217,7 +217,7 @@ export default function ServiceAreaPage() {
                                 Find detailed information about each of our service areas below.
                             </p>
                         </div>
-                        
+
                         <div className="grid md:grid-cols-3 gap-8">
                             {/* Andover */}
                             <div className="bg-white rounded-xl overflow-hidden shadow-md">
@@ -250,7 +250,7 @@ export default function ServiceAreaPage() {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {/* Marlborough */}
                             <div className="bg-white rounded-xl overflow-hidden shadow-md">
                                 <div className="p-6">
@@ -282,7 +282,7 @@ export default function ServiceAreaPage() {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {/* Hungerford */}
                             <div className="bg-white rounded-xl overflow-hidden shadow-md">
                                 <div className="p-6">

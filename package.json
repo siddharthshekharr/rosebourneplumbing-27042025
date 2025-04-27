@@ -15,7 +15,8 @@
     "update-image-paths": "node scripts/update-image-paths.js",
     "validate-images": "node scripts/validate-image-paths.js",
     "download-images": "node scripts/download-cloudinary-images.js",
-    "cleanup-cloudinary": "node scripts/cleanup-cloudinary.js"
+    "cleanup-cloudinary": "node scripts/cleanup-cloudinary.js",
+    "cleanup-root": "node scripts/cleanup-root.js"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.8",
